@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#08181f" />
+  <meta name="description" content="A little shark. A big appetite for words. Swim a neon reef maze, collect letters and grow in this free browser arcade game." />
+  <title>FINWORD — Bite-sized word arcade</title>
+  <link rel="icon" type="image/svg+xml" href="./fin.svg" />
+</head>
+<body>
+  <a class="skip" href="#arcade">Skip to game</a>
+  <header class="masthead wrap">
+    <a class="wordmark" href="#" aria-label="Finword home"><img src="./fin.svg" alt="" width="29" height="29" />FINWORD<span>BITE-SIZED WORD ARCADE</span></a>
+    <nav aria-label="Main"><a href="#how-to">How to play</a><a href="https://github.com/blackstackdev/finword-arcade" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><span class="version">VOL. 01 / v0.1.0</span></nav>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-label="Finword arcade">
+      <div class="intro">
+        <p class="eyebrow"><span class="live-dot"></span> THE REEF IS OPEN</p>
+        <h1>SMALL FIN.<br />BIG <span>APPETITE.</span></h1>
+        <p class="lede">A word game with teeth.<br />Bite the letters. Build the word.<br />Become the biggest fin in the maze.</p>
+        <a class="primary jump" href="#arcade">TAKE A BITE <span aria-hidden="true">↗</span></a>
+        <div class="hero-shark" aria-hidden="true"><svg viewBox="0 0 300 160"><path class="shark-shadow" d="M22 100Q110 180 261 102Q177 149 22 100Z"/><path class="shark-main" d="M27 86L6 58L11 106L29 112Q76 142 175 112L223 88Q185 49 108 58L93 22L68 67Z"/><path class="shark-belly" d="M29 111Q129 126 223 88Q174 147 29 111Z"/><path class="shark-fin" d="M110 98L96 143L145 111Z"/><circle cx="184" cy="78" r="6" fill="#08181f"/><circle cx="186" cy="76" r="2" fill="white"/><path d="M202 99l-7 7m-40-31-5 14m-5-14-5 14m-5-14-5 14" stroke="#234653" stroke-width="3" fill="none"/></svg><span>100% LETTER-FED</span></div>
+        <div class="specs"><span>NO DOWNLOAD</span><span>NO SIGN-IN</span><span>JUST ONE MORE GO</span></div>
+      </div>
+      <section class="cabinet" id="arcade" aria-label="Playable word maze">
+        <div class="cabinet-top"><span><i></i> FINWORD / REEF RUN</span><div><button id="sound" class="text-button" aria-pressed="false">SOUND OFF</button><button id="pause" class="text-button" aria-label="Pause game" disabled>Ⅱ</button></div></div>
+        <div class="hud"><div><span>SCORE</span><strong id="score">00000</strong></div><div><span>PERSONAL BEST</span><strong id="best">00000</strong></div><div class="lives"><span>FINS LEFT</span><strong id="lives" aria-label="3 lives">▰ ▰ ▰</strong></div></div>
+        <div class="objective"><div><span id="round">WORD 01 / 06</span><strong id="target" aria-label="Target word FIN"></strong></div><div class="next-bite"><span>NEXT BITE</span><strong id="next-letter">F</strong></div></div>
+        <div class="arena" id="arena" tabindex="0" role="group" aria-label="Shark maze. Use arrow keys or W A S D to steer. Space to pause.">
+          <div id="scene" aria-hidden="true"></div>
+          <div class="scanlines" aria-hidden="true"></div>
+          <div class="overlay" id="overlay"><div class="overlay-card">
+            <span class="eyebrow" id="overlay-kicker">COIN-FREE. FIN-FULL.</span>
+            <h2 id="overlay-title">FEED YOUR<br />INNER SHARK.</h2>
+            <p id="overlay-copy">Spell six ocean words. Collect letters in order.<br />Watch the walls. Watch your tail.</p>
+            <label class="speed-select" id="speed-label">YOUR CURRENT <select id="speed"><option value="cruise">Cruise · relaxed</option><option value="arcade">Arcade · snappy</option></select></label>
+            <button class="primary" id="start">LET’S SWIM <span aria-hidden="true">▶</span></button>
+          </div></div>
+        </div>
+        <div class="game-status"><span id="message" role="status" aria-live="polite">Eat the next letter. Your shark grows with every correct bite.</span><span id="length">LENGTH 03</span></div>
+        <div class="controls-bar"><span class="key-help"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> / WASD <span>STEER</span> <kbd>SPACE</kbd> <span>PAUSE</span></span><button class="text-button" id="restart">NEW RUN ↻</button></div>
+        <div class="touch-controls" aria-label="Touch steering"><button data-dir="up" aria-label="Steer up">↑</button><div><button data-dir="left" aria-label="Steer left">←</button><span aria-hidden="true">FIN<br />CONTROL</span><button data-dir="right" aria-label="Steer right">→</button></div><button data-dir="down" aria-label="Steer down">↓</button></div>
+      </section>
+    </section>
+    <section id="how-to" class="how-to"><div><p class="eyebrow">A QUICK FIELD GUIDE</p><h2>LESS SCROLL.<br /><span>MORE CHOMP.</span></h2></div><ol><li><span>01 / FIND YOUR LETTER</span><p>Follow the word above the maze. Eat its letters from left to right. The next bite is always shown.</p></li><li><span>02 / GET A LITTLE BIGGER</span><p>Each right letter adds a segment. Finish a word for a bonus. A wrong bite costs 25 points.</p></li><li><span>03 / KEEP YOUR FINS</span><p>Walls and your own body cost a life and reset your length. Spell all six words to clear the reef.</p></li></ol></section>
+    <details class="about"><summary>Inside this little arcade <span>+</span></summary><p>Finword is a standalone browser game with an original maze and a shark made from simple 3D shapes. Your best score and sound preference stay in this browser when storage is available. No account, analytics or in-game purchases. Choose Cruise for a slower swim; use the buttons or swipe on touch screens.</p><p>A Krēˈādiv Worx game. Product direction: Raiden. Implementation: Codi. v0.1.0 · Browser prototype.</p></details>
+  </main>
+  <footer class="wrap"><span>FINWORD <b>／</b> BITE-SIZED WORD ARCADE</span><span>MADE WITH A LITTLE BITE. © 2026 KRĒˈĀDIV WORX</span></footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
